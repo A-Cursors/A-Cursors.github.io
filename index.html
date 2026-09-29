@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A-Cursors — discover beautiful custom cursors and cursor packs.">
+  <title>A-Cursors — Custom Cursor Collection</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="A-Cursors home">
+        <img src="logo.png" alt="A-Cursors logo" class="brand-logo">
+        <span>A-Cursors</span>
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#latest">Latest</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☾</button>
+        <a class="admin-link" href="login.html">Admin</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">CUSTOM CURSOR COLLECTION</span>
+          <h1>Make your pointer <span>stand out.</span></h1>
+          <p>Discover stylish, gaming, anime, aesthetic and creative cursors — all in one place.</p>
+          <div class="hero-search">
+            <span>⌕</span>
+            <input id="searchInput" type="search" placeholder="Search cursors, tags, categories..." autocomplete="off">
+            <kbd>Ctrl K</kbd>
+          </div>
+          <div id="searchHint" class="search-hint">Search by title, category or the keywords added from the admin panel.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="latest">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-label">COLLECTION</span>
+            <h2>Latest cursors</h2>
+          </div>
+          <span class="result-count" id="resultCount">Loading...</span>
+        </div>
+        <div id="cursorGrid" class="cursor-grid">
+          <div class="loading-state"><div class="spinner"></div><span>Loading cursors...</span></div>
+        </div>
+        <div id="emptyState" class="empty-state hidden">
+          <div class="empty-icon">⌕</div>
+          <h3>No cursors found</h3>
+          <p>Try another search or add your first cursor from the admin panel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="container">
+        <div class="section-head"><div><span class="section-label">EXPLORE</span><h2>Browse categories</h2></div></div>
+        <div class="category-list" id="categoryList"></div>
+      </div>
+    </section>
+    </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-container">
+
+      <div class="footer-brand">
+        <img src="logo.png" alt="A-Cursors">
+
+        <div>
+          <h3>A-Cursors</h3>
+          <p>Premium cursors for your desktop.</p>
+        </div>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </nav>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/appexiodev?stkn=MXh3dG53cHd2bmVqaw==" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">X</a>
+        <a href="https://x.com/appexiodev" target="_blank" rel="noopener">Twitter</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> A-Cursors. All rights reserved.</span>
+      <span>
+    Made with ♥ by
+    <a href="https://appexiodev.github.io" class="dev-link" target="_blank" rel="noopener">
+      AppexioDevs
+    </a>
+  </span>
+    </div>
+
+  </footer>
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>

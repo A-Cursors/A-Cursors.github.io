@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About A-Cursors — a collection of custom cursors for desktop users.">
+  <title>About — A-Cursors</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="A-Cursors logo" class="brand-logo">
+      <span>A-Cursors</span>
+    </a>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☾</button>
+    </div>
+
+  </div>
+</header>
+
+<main class="legal-main">
+
+  <div class="container legal-container">
+
+    <a href="index.html" class="back-link">← Back to A-Cursors</a>
+
+    <div class="legal-header">
+      <span class="section-label">ABOUT</span>
+      <h1>About A-Cursors</h1>
+      <p>Customize your desktop experience with beautiful cursor designs.</p>
+    </div>
+
+    <article class="legal-content">
+
+      <h2>What is A-Cursors?</h2>
+
+      <p>
+        A-Cursors is a curated platform for discovering custom mouse cursors
+        and cursor packs. The website is designed to make it easier to explore
+        different cursor styles, categories, and themes in one place.
+      </p>
+
+      <h2>Our Collection</h2>
+
+      <p>
+        The collection may include gaming, anime, aesthetic, minimal,
+        creative, animated, and other custom cursor designs. Each cursor
+        listing may contain information such as its title, creator,
+        category, description, version, size, keywords, images, and
+        download information.
+      </p>
+
+      <h2>Simple and Easy to Explore</h2>
+
+      <p>
+        A-Cursors is designed with a simple search and browsing experience.
+        You can search for cursor names, categories, creators, descriptions,
+        and keywords to find designs that match your interests.
+      </p>
+
+      <h2>Third-Party Content</h2>
+
+      <p>
+        Some cursor files, images, or download resources may be hosted on
+        external platforms. A-Cursors does not necessarily host or control
+        those external resources.
+      </p>
+
+      <h2>Our Goal</h2>
+
+      <p>
+        The goal of A-Cursors is to provide a clean and convenient place
+        where users can discover interesting cursor designs and access
+        available resources.
+      </p>
+
+    </article>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> A-Cursors. All rights reserved.</span>
+    <span>Made with ♥ by AppexioDevs</span>
+  </div>
+</footer>
+
+<script>
+  const savedTheme = localStorage.getItem("a-cursors-theme");
+
+  if (savedTheme === "light") {
+    document.body.classList.add("light-theme");
+  }
+
+  document.getElementById("themeToggle")?.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+
+    localStorage.setItem(
+      "a-cursors-theme",
+      document.body.classList.contains("light-theme") ? "light" : "dark"
+    );
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

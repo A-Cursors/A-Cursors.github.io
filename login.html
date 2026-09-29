@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login — A-Cursors</title><link rel="icon" type="image/png" href="logo.png"><link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
+  <main class="auth-page">
+    <div class="auth-card">
+      <a class="auth-brand" href="index.html"><img src="logo.png" alt="A-Cursors logo"><span>A-Cursors</span></a>
+      <span class="section-label">SECURE AREA</span><h1>Admin login</h1><p class="auth-subtitle">Sign in to manage your cursor collection.</p>
+      <form id="loginForm" class="auth-form">
+        <label>Email<input id="email" type="email" autocomplete="username" required placeholder="admin@example.com"></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password" required placeholder="••••••••"></label>
+        <button class="primary-btn full-btn" type="submit">Sign in</button>
+        <div id="loginMessage" class="form-message"></div>
+      </form>
+      <a class="back-link centered" href="index.html">← Back to A-Cursors</a>
+    </div>
+  </main>
+  <script type="module" src="login.js"></script>
+</body>
+</html>

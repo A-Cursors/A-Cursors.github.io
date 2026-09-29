@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A-Cursors Privacy Policy.">
+  <title>Privacy Policy — A-Cursors</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="A-Cursors logo" class="brand-logo">
+      <span>A-Cursors</span>
+    </a>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☾</button>
+    </div>
+
+  </div>
+</header>
+
+<main class="legal-main">
+
+  <div class="container legal-container">
+
+    <a href="index.html" class="back-link">← Back to A-Cursors</a>
+
+    <div class="legal-header">
+      <span class="section-label">PRIVACY</span>
+      <h1>Privacy Policy</h1>
+      <p>Last updated: 2026</p>
+    </div>
+
+    <article class="legal-content">
+
+      <h2>Overview</h2>
+
+      <p>
+        A-Cursors respects your privacy. This Privacy Policy explains how
+        information may be handled when you use the A-Cursors website.
+      </p>
+
+      <h2>Information We Collect</h2>
+
+      <p>
+        A-Cursors is primarily designed for browsing and discovering cursor
+        resources. We do not intentionally require users to provide personal
+        information simply to browse the website.
+      </p>
+
+      <h2>Searches and Preferences</h2>
+
+      <p>
+        Certain website preferences, such as the selected light or dark
+        theme, may be stored locally in your browser. This information is
+        used to provide a more convenient browsing experience.
+      </p>
+
+      <h2>Cookies and Local Storage</h2>
+
+      <p>
+        The website may use browser storage technologies such as local
+        storage to remember preferences. These technologies generally remain
+        on your device and are not used by A-Cursors as a personal identity
+        system.
+      </p>
+
+      <h2>Third-Party Services</h2>
+
+      <p>
+        A-Cursors may use third-party services for hosting, analytics,
+        advertisements, content delivery, or external downloads. These
+        services may process information according to their own privacy
+        policies.
+      </p>
+
+      <h2>External Links</h2>
+
+      <p>
+        A-Cursors may contain links to external websites or download
+        locations. Once you leave A-Cursors, the privacy practices of the
+        external website apply.
+      </p>
+
+      <h2>Children's Privacy</h2>
+
+      <p>
+        A-Cursors does not intentionally collect personal information from
+        children through the website.
+      </p>
+
+      <h2>Changes to This Policy</h2>
+
+      <p>
+        This Privacy Policy may be updated from time to time. Any changes
+        will be reflected on this page.
+      </p>
+
+    </article>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> A-Cursors. All rights reserved.</span>
+    <span>Made with ♥ by AppexioDevs</span>
+  </div>
+</footer>
+
+<script>
+  const savedTheme = localStorage.getItem("a-cursors-theme");
+
+  if (savedTheme === "light") {
+    document.body.classList.add("light-theme");
+  }
+
+  document.getElementById("themeToggle")?.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+
+    localStorage.setItem(
+      "a-cursors-theme",
+      document.body.classList.contains("light-theme") ? "light" : "dark"
+    );
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

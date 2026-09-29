@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — A-Cursors</title><link rel="icon" type="image/png" href="logo.png"><link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+  <header class="site-header">
+    <div class="container nav-wrap"><a class="brand" href="index.html"><img src="logo.png" alt="A-Cursors logo" class="brand-logo"><span>A-Cursors</span></a><div class="admin-title">Control Panel</div><div class="nav-actions"><a class="admin-link" href="index.html">View site</a><button class="danger-outline" id="logoutBtn">Logout</button></div></div>
+  </header>
+  <main class="admin-main"><div class="container">
+    <div id="adminLoading" class="loading-state"><div class="spinner"></div><span>Checking admin access...</span></div>
+    <div id="adminApp" class="hidden">
+      <div class="admin-heading"><div><span class="section-label">CONTENT MANAGEMENT</span><h1 id="formHeading">Add a cursor</h1></div><button id="cancelEdit" class="secondary-btn hidden">Cancel edit</button></div>
+      <div class="admin-layout">
+        <form id="cursorForm" class="admin-form card-panel">
+          <input type="hidden" id="cursorId">
+          <div class="form-grid">
+            <label>Cursor name *<input id="name" required placeholder="e.g. Goku Blue Cursor"></label>
+            <label>Category *<input id="category" required placeholder="Anime, Gaming, Aesthetic..."></label>
+            <label>Creator<input id="creator" placeholder="Creator name"></label>
+            <label>Version<input id="version" placeholder="1.0"></label>
+            <label>File size<input id="size" placeholder="2.4 MB"></label>
+            <label>External download URL *<input id="downloadUrl" type="url" required placeholder="https://..."></label>
+          </div>
+          <label>Main preview image URL *<input id="imageUrl" type="url" required placeholder="https://.../preview.jpg"></label>
+          <label>Description<textarea id="description" rows="5" placeholder="Describe this cursor..."></textarea></label>
+          <label>Search keywords <span class="field-note">(comma separated)</span><input id="keywords" placeholder="goku, dragon ball, anime, blue, gaming"></label>
+          <label>Product pictures <span class="field-note">(one external image URL per line)</span><textarea id="gallery" rows="5" placeholder="https://.../image1.jpg&#10;https://.../image2.jpg"></textarea></label>
+          <label>Installation / information <span class="field-note">(one line or paragraph)</span><textarea id="instructions" rows="7" placeholder="Add installation instructions or anything users should know..."></textarea></label>
+          <div class="form-actions"><button class="primary-btn" type="submit" id="saveBtn">Add cursor</button><button class="secondary-btn" type="button" id="clearBtn">Clear</button></div>
+          <div id="adminMessage" class="form-message"></div>
+        </form>
+
+        <section class="card-panel manage-panel"><div class="panel-head"><div><span class="section-label">DATABASE</span><h2>Your cursors</h2></div><span id="adminCount" class="result-count"></span></div><div id="adminList" class="admin-list"><div class="loading-state"><div class="spinner"></div></div></div></section>
+      </div>
+    </div>
+  </div></main>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

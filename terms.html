@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A-Cursors Terms of Use.">
+  <title>Terms — A-Cursors</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="A-Cursors logo" class="brand-logo">
+      <span>A-Cursors</span>
+    </a>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☾</button>
+    </div>
+
+  </div>
+</header>
+
+<main class="legal-main">
+
+  <div class="container legal-container">
+
+    <a href="index.html" class="back-link">← Back to A-Cursors</a>
+
+    <div class="legal-header">
+      <span class="section-label">TERMS</span>
+      <h1>Terms of Use</h1>
+      <p>Last updated: 2026</p>
+    </div>
+
+    <article class="legal-content">
+
+      <h2>Acceptance of Terms</h2>
+
+      <p>
+        By accessing or using A-Cursors, you agree to follow these Terms of
+        Use. If you do not agree with these terms, please discontinue use of
+        the website.
+      </p>
+
+      <h2>Use of the Website</h2>
+
+      <p>
+        A-Cursors is provided for browsing, discovering, and accessing
+        information about custom cursor resources. You agree to use the
+        website only for lawful purposes.
+      </p>
+
+      <h2>Cursor Downloads</h2>
+
+      <p>
+        Cursor files and download resources may be provided through external
+        links. Users are responsible for checking downloaded files and
+        ensuring that they are compatible with their systems before
+        installation.
+      </p>
+
+      <h2>Third-Party Websites</h2>
+
+      <p>
+        A-Cursors may link to websites operated by third parties. A-Cursors
+        does not control those websites and is not responsible for their
+        content, availability, policies, or practices.
+      </p>
+
+      <h2>Content</h2>
+
+      <p>
+        Information displayed on A-Cursors may be provided by administrators,
+        creators, or external resources. While reasonable efforts may be
+        made to keep information useful and accurate, information may change
+        or contain errors.
+      </p>
+
+      <h2>Prohibited Use</h2>
+
+      <p>
+        You must not attempt to damage, disrupt, abuse, exploit, or interfere
+        with the operation or security of A-Cursors.
+      </p>
+
+      <h2>Changes</h2>
+
+      <p>
+        These Terms of Use may be changed or updated when necessary. Continued
+        use of A-Cursors after changes are published means that you accept
+        the updated terms.
+      </p>
+
+    </article>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> A-Cursors. All rights reserved.</span>
+    <span>Made with ♥ by AppexioDevs</span>
+  </div>
+</footer>
+
+<script>
+  const savedTheme = localStorage.getItem("a-cursors-theme");
+
+  if (savedTheme === "light") {
+    document.body.classList.add("light-theme");
+  }
+
+  document.getElementById("themeToggle")?.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+
+    localStorage.setItem(
+      "a-cursors-theme",
+      document.body.classList.contains("light-theme") ? "light" : "dark"
+    );
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

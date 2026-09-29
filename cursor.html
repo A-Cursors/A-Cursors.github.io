@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A-Cursors cursor details.">
+  <title>Cursor — A-Cursors</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img src="logo.png" alt="A-Cursors logo" class="brand-logo"><span>A-Cursors</span></a>
+      <nav class="desktop-nav"><a href="index.html">Home</a><a href="index.html#categories">Categories</a></nav>
+      <div class="nav-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☾</button></div>
+    </div>
+  </header>
+
+  <main class="detail-main">
+    <div class="container">
+      <a class="back-link" href="index.html">← Back to cursors</a>
+      <div id="detailLoading" class="loading-state detail-loading"><div class="spinner"></div><span>Loading cursor...</span></div>
+      <div id="detailError" class="empty-state hidden"><div class="empty-icon">!</div><h3>Cursor not found</h3><p>This cursor may have been removed or the link is incorrect.</p><a class="primary-btn" href="index.html">Back home</a></div>
+
+      <article id="detailContent" class="detail-content hidden">
+        <div class="detail-top">
+          <div class="detail-gallery">
+            <div class="main-preview"><img id="mainImage" src="" alt=""></div>
+            <div class="thumbnail-row" id="thumbnailRow"></div>
+          </div>
+          <div class="detail-info">
+            <div class="tag-row"><span id="detailCategory" class="pill"></span><span id="detailVersion" class="pill muted-pill hidden"></span></div>
+            <h1 id="detailTitle"></h1>
+            <p id="detailDescription" class="detail-description"></p>
+            <div class="detail-meta" id="detailMeta"></div>
+            <a id="downloadButton" class="download-btn" href="#" target="_blank" rel="noopener noreferrer">Download Cursor ↗</a>
+            <p class="external-note">You will be redirected to the external download link provided by the creator.</p>
+          </div>
+        </div>
+
+        <section class="detail-section" id="screenshotsSection">
+          <div class="section-label">PREVIEW</div><h2>Product pictures</h2>
+          <div class="detail-images" id="detailImages"></div>
+        </section>
+        <section class="detail-section" id="instructionsSection">
+          <div class="section-label">GUIDE</div><h2>Installation / information</h2>
+          <div class="rich-text" id="detailInstructions"></div>
+        </section>
+        <section class="detail-section" id="keywordsSection">
+          <div class="section-label">TAGS</div><div class="keyword-list" id="keywordList"></div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-wrap"><div class="brand footer-brand"><img src="logo.png" alt="A-Cursors logo" class="brand-logo"><span>A-Cursors</span></div><span>© <span id="year"></span> A-Cursors</span></div></footer>
+  <script type="module" src="cursor.js"></script>
+</body>
+</html>
